@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-title-responsive {
+    font-size: clamp(16px, 9vw, 81px);
+    line-height: clamp(16*1.2px, 1.2*9vw, 1.2*81px);
+  }
+  .text-subtitle-responsive {
+    font-size: clamp(14px, 3.5vw, 24px);;
+    line-height: clamp(1.1*14px, 1.2*3.5vw, 1.2*24px);;
+  }
+  .text-link-responsive {
+    font-size: clamp(1.125rem, 2vw, 20px);;
+    line-height: clamp(1.125rem, 2vw, 20px);;
+  }
+  .border-bottom {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px
+  }
+  .border-bottom-white {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px; 
+  }
+  .min-h-90 {
+    min-height: 90vh;
+  }
+  .min-h-70 {
+    min-height: 70vh;
+  }
+  .h-card {
+    height: 30vh;
+  }
+  .filter-grayscale {
+    filter: grayscale(80%);
+  }
+  .section-header {
+    @apply max-w-screen-xl	mx-auto min-h-90 py-20 lg:px-40 px-6 flex flex-col justify-center
+  }
+  .section {
+    @apply max-w-screen-xl	mx-auto pt-14 pb-12 lg:px-40 px-6 flex flex-col justify-center
+  }
+  .fade {
+    animation: fadeAnimation cubic-bezier(.5, 0, 0, 1) .6s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;   
+  }
+  
+  @keyframes fadeAnimation { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(50px) 
+    } 
+    33% { 
+      opacity: 0; 
+      transform: translateY(50px) 
+    }
+    100% { 
+        opacity: 1; 
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1),
+     } 
+  } 
+  @layer components {
+   .photo-text {
+      width: 560px;
+   }
+   .text-title{
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  }
+}
