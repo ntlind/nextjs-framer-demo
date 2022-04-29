@@ -5,6 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Inter"],
+    },
+    variants: {
+      animation: ["motion-safe"],
+      extend: {},
+    },
     colors: {
       primary: "#00b0ff",
       secondary: "#1886E4",
@@ -22,13 +29,6 @@ module.exports = {
       lightGrayBackground: "#F5F7FC",
       eggshell: "#fafafa",
     },
-    extend: {},
-  },
-  fontFamily: {
-    sans: ["Poppins"],
-  },
-  variants: {
-    animation: ["motion-safe"],
     extend: {},
   },
   plugins: [],
