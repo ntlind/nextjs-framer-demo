@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 
-export default function EaseInTransition({ children, delay = .25, duration = .85, initialX = 0, initialY = -50, renderOnce = false }) {
+export default function EaseInTransition({ children, delay = .25, duration = .45, initialX = 0, initialY = -20, renderOnce = true }) {
     const variants = {
         fadeIn: {
             initial: {

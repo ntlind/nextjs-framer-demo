@@ -5,7 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 export default function Hero() {
   return (
     <div id="header" className={"section-header"}>
-      <EaseInTransition delay={1} duration={1} initialY={50}>
+      <EaseInTransition delay={1} duration={1} initialY={50} renderOnce={false}>
         <div className="text-title-responsive">Hi, I'm Nick</div>
         <div className="text-subtitle-responsive text-lightGrayText my-6">
           I design, code, and scale data science applications
