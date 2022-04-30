@@ -1,5 +1,4 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
 
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
@@ -48,21 +47,11 @@ function TechCard({ image, progress }) {
 }
 
 export default function Skills() {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0,
-  });
-
   return (
     <div className="bg-nearBlack text-white">
       <div
         id="skills"
-        ref={ref}
-        className={
-          inView
-            ? "max-w-screen-xl	mx-auto pb-20 lg:px-40 px-6 flex flex-col justify-center fade"
-            : "max-w-screen-xl	mx-auto pb-20 lg:px-40 px-6 flex flex-col justify-center invisible"
-        }
+        className="max-w-screen-xl	mx-auto pb-20 lg:px-40 px-6 flex flex-col justify-center "
       >
         {" "}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12 mt-4 xl:mt-10">

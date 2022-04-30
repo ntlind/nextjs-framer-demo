@@ -1,6 +1,4 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
-import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (

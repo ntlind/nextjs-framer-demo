@@ -1,6 +1,5 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
-
+import EaseInTransition from "../components/EaseInTransition.tsx";
 import Skills from "../page-sections/Skills.js";
 
 function InfoCard({ title, description, tags }) {
@@ -42,49 +41,42 @@ Voluptatibus quia, nulla!"
 }
 
 export default function Services() {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0,
-  });
-
   return (
     <div className="bg-nearBlack text-white">
-      <div
-        id="services"
-        ref={ref}
-        className={inView ? "section fade" : "section invisible"}
-      >
-        {" "}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12">
-          <div className="text-4xl lg:text-title">
-            Areas of <br /> expertise
-          </div>
-          <div className="grid grid-rows-3 gap-6 mt-10 lg:mt-0">
-            <div>
-              <div className="text-2xl">Machine Learning</div>
-              <p className="text-lightGrayText text-md mt-4">
-                I build accurate, interpretable forecasting engines to
-                understand and predict future events.
-              </p>
+      <EaseInTransition initialY={50}>
+        <div id="services" className="section">
+          {" "}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12">
+            <div className="text-4xl lg:text-title">
+              Areas of <br /> expertise
             </div>
-            <div>
-              <div className="text-2xl">Product Management</div>
-              <p className="text-lightGrayText text-md mt-4">
-                I bridge the gap between executives, users, and engineers to
-                build sustainable software products.
-              </p>
-            </div>
-            <div>
-              <div className="text-2xl">Data Science</div>
-              <p className="text-lightGrayText text-md mt-4">
-                I mine massive distributed datasets to uncover relationships,
-                validate hypotheses, and share stories.
-              </p>
+            <div className="grid grid-rows-3 gap-6 mt-10 lg:mt-0">
+              <div>
+                <div className="text-2xl">Machine Learning</div>
+                <p className="text-lightGrayText text-md mt-4">
+                  I build accurate, interpretable forecasting engines to
+                  understand and predict future events.
+                </p>
+              </div>
+              <div>
+                <div className="text-2xl">Product Management</div>
+                <p className="text-lightGrayText text-md mt-4">
+                  I bridge the gap between executives, users, and engineers to
+                  build sustainable software products.
+                </p>
+              </div>
+              <div>
+                <div className="text-2xl">Data Science</div>
+                <p className="text-lightGrayText text-md mt-4">
+                  I mine massive distributed datasets to uncover relationships,
+                  validate hypotheses, and share stories.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <Skills />
+        <Skills />
+      </EaseInTransition>
     </div>
   );
 }
