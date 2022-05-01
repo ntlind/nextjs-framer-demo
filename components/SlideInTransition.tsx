@@ -35,6 +35,7 @@ export default function SlideInTransition({
                     variants={variants.fadeIn}
                     whileInView="animate"
                     viewport={{ once: renderOnce }}
+                    className="text-contrast"
                 >
                     {children}
                 </motion.div>

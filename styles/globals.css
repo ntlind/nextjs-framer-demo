@@ -9,6 +9,10 @@
 }
 
 @layer utilities {
+  .text-contrast {
+    color: #fff;
+    mix-blend-mode: difference;
+  }
   .text-title-responsive {
     font-size: clamp(var(--font-min), var(--font-preferred), var(--font-max));
     line-height: clamp(1.2*var(--font-min), 1.2*var(--font-preferred), 1.2*var(--font-max));

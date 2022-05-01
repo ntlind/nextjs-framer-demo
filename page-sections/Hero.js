@@ -10,7 +10,6 @@ export default function Hero() {
     >
       <div className="flex flex-col justify-between h-screen">
         <Header />
-
         <SlideInTransition>
           <div className="text-title-responsive font-extrabold tracking-tight text-right">
             nick lind
