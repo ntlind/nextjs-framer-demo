@@ -75,7 +75,7 @@
   /* Change the width and background on hover, aka sliding out */
   .slide-left-right:hover:after {
     width: 100%;
-    background: #111;
+    background: #fff;
   }
 
   

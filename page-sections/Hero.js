@@ -15,7 +15,7 @@ export default function Hero() {
             nick lind
           </div>
         </SlideInTransition>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center text-contrast">
           <div className="flex flex-col">
             <a className="underline mb-4">nthorlind@gmail.com</a>
             <span className="text-5xl font-bold">
