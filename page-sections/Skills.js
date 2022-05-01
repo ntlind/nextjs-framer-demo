@@ -23,7 +23,7 @@ function SkillCard({ title, progress }) {
       <div className="col-span-2  flex flex-wrap content-center">
         <div className="text-lg">{title}</div>
       </div>
-      <div className="col-span-2 flex flex-col justify-center">
+      <div className="col-span-2 flex flex-col justify-center relative">
         <BorderLinearProgress variant="determinate" value={progress} />
       </div>
       {/* <div className="col-span-1 flex flex-col justify-center font-light text-gray-200 text-sm">

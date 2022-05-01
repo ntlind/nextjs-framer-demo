@@ -6,7 +6,7 @@ export default function Footer() {
       <div
         id="footer"
         className={
-          "max-w-screen-xl	mx-auto h-16 lg:px-40 px-6 flex flex-col justify-center fade"
+          "max-w-screen-xl	mx-auto h-16 lg:px-40 px-6 flex flex-col justify-center"
         }
       >
         <div className="flex justify-between font-thin uppercase text-sm">

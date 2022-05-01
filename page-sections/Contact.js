@@ -14,7 +14,7 @@ export default function VideoBar() {
     <div id="contact">
       {" "}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:pl-40 min-h-70">
-        <div className="lg:photo-text flex flex-col justify-center text-black px-6 lg:px-0 py-8 lg:py-24 lg:ml-auto fade">
+        <div className="lg:photo-text flex flex-col justify-center text-black px-6 lg:px-0 py-8 lg:py-24 lg:ml-auto">
           <EaseInTransition initialY={0}>
             <div className="text-4xl lg:text-title pr-12 text-black">
               Contact
