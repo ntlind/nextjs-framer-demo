@@ -1,49 +1,6 @@
 import { React } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Header from "./Header.js";
-
-function SlideInTransition({
-  children,
-  delay = 0.55,
-  duration = 0.8,
-  initialX = 0,
-  fontSize = "100%",
-  renderOnce = true,
-}) {
-  const variants = {
-    fadeIn: {
-      initial: {
-        opacity: 1,
-        x: initialX,
-        y: fontSize,
-      },
-      animate: {
-        opacity: 1,
-        y: 0,
-        transition: {
-          delay: delay,
-          duration: duration,
-          ease: [0, 0.55, 0.45, 1],
-          staggerChildren: 0.1,
-        },
-      },
-    },
-  };
-  return (
-    <div className="overflow-hidden mt-4">
-      <AnimatePresence>
-        <motion.div
-          initial="initial"
-          variants={variants.fadeIn}
-          whileInView="animate"
-          viewport={{ once: renderOnce }}
-        >
-          {children}
-        </motion.div>
-      </AnimatePresence>
-    </div>
-  );
-}
+import SlideInTransition from "../components/SlideInTransition.tsx";
 
 export default function Hero() {
   return (
@@ -55,7 +12,7 @@ export default function Hero() {
         <Header />
 
         <SlideInTransition>
-          <div className="text-title-responsive font-bold tracking-tight text-right">
+          <div className="text-title-responsive font-extrabold tracking-tight text-right">
             nick lind
           </div>
         </SlideInTransition>

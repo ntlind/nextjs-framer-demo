@@ -21,7 +21,7 @@ export default function VideoBar() {
             </div>
             <div className="mt-12">
               <a href="mailto:nthorlind@gmail.com" target="_blank">
-                <span className="text-link-responsive text-black font-light border-bottom font-light tracking-wide cursor-pointer">
+                <span className="text-link-responsive text-black border-bottom font-light tracking-wide cursor-pointer">
                   nthorlind@gmail.com
                 </span>
               </a>

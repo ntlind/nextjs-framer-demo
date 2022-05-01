@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar.tsx";
-import EaseInTransition from "../components/EaseInTransition.tsx";
+import SlideInTransition from "../components/SlideInTransition.tsx";
 
 export default function Header() {
   return (
     <div className={"bg-transparent"}>
-      <EaseInTransition delay={0.35}>
+      <SlideInTransition>
         <div className="flex justify-between items-center border-gray-100 py-2 md:space-x-10 text-sm">
           <div className="space-x-4">
             <a href="#">
@@ -19,7 +19,7 @@ export default function Header() {
             <span className="slide-left-right">Contact</span>
           </a>
         </div>
-      </EaseInTransition>
+      </SlideInTransition>
     </div>
   );
 }

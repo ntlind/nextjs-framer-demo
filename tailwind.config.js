@@ -12,7 +12,7 @@ module.exports = {
       transparent: "transparent",
       nearWhite: "#ccc",
       nearBlack: "#111111",
-      eggshell: "#fafafa",
+      eggshell: "#fcf6f4",
       theme: {
         DEFAULT: "#3c7cff",
         lighter: "#36C1FF",
