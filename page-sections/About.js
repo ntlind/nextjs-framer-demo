@@ -22,7 +22,7 @@ export default function About() {
               </div>
             </EaseInTransition>
             <EaseInTransition>
-              <p className="text-gray-200 text-md mt-4 xl:mt-10">
+              <div className="text-gray-200 text-md mt-4 xl:mt-10">
                 Data science leader and full-stack engineer focused on driving
                 growth through actionable, interpretable analytics. 7+ years of
                 experience across the Retail, CPG, and Healthcare sectors.
@@ -39,7 +39,7 @@ export default function About() {
                     class_style="uppercase text-lg text-white font-light border-bottom-white mb-20 font-light tracking-wide cursor-pointer"
                   />
                 </div>
-              </p>
+              </div>
             </EaseInTransition>
           </div>
         </div>

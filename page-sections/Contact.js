@@ -50,7 +50,6 @@ export default function VideoBar() {
           <video
             playsInline
             autoPlay
-            autobuffer
             loop
             muted
             className="block object-cover w-full h-full overflow-hidden"

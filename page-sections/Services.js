@@ -43,8 +43,8 @@ Voluptatibus quia, nulla!"
 export default function Services() {
   return (
     <div className="bg-nearBlack text-white">
-      <EaseInTransition initialY={50}>
-        <div id="services" className="section">
+      <div id="services" className="section">
+        <EaseInTransition initialY={50}>
           {" "}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12">
             <div className="text-4xl lg:text-title">
@@ -74,9 +74,9 @@ export default function Services() {
               </div>
             </div>
           </div>
-        </div>
-        <Skills />
-      </EaseInTransition>
+          <Skills />
+        </EaseInTransition>
+      </div>
     </div>
   );
 }

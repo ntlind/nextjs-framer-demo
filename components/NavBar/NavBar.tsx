@@ -137,6 +137,7 @@ export default function NavBar() {
                                     whileHover={{ scale: 1.1 }}
                                     variants={itemVariants}
                                     className="block"
+                                    key={id}
                                 >
                                     <ScrollButton text={name} section={to} callback={onClick} />
                                 </motion.div>

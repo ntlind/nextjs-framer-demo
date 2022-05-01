@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "@material-ui/core/Link";
 import { motion } from "framer-motion";
 
 const variants = {
@@ -48,11 +47,12 @@ function ProjectCard({
             <p className="text-4xl py-6">{title}</p>
             <p className="text-gray-500 text-md lg:pr-16"> {description}</p>
             <div className="mt-12">
-              <Link href={link_url} underline="none">
-                <a className="uppercase text-link-responsive text-black font-light border-bottom font-light tracking-wide cursor-pointer">
-                  {link_text}
-                </a>
-              </Link>
+              <a
+                href={link_url}
+                className="uppercase text-link-responsive text-black border-bottom font-light tracking-wide cursor-pointer"
+              >
+                {link_text}
+              </a>
             </div>
           </div>
         </div>

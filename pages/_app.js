@@ -1,11 +1,10 @@
 import "../styles/globals.css";
 import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
-import { ThemeProvider } from "@material-ui/core/styles";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider>
+    <>
       <Head>
         <meta
           name="viewport"
@@ -17,7 +16,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
-    </ThemeProvider>
+    </>
   );
 }
 

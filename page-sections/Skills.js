@@ -26,9 +26,6 @@ function SkillCard({ title, progress }) {
       <div className="col-span-2 flex flex-col justify-center relative">
         <BorderLinearProgress variant="determinate" value={progress} />
       </div>
-      {/* <div className="col-span-1 flex flex-col justify-center font-light text-gray-200 text-sm">
-        {progress}%
-      </div> */}
     </div>
   );
 }
@@ -48,28 +45,28 @@ function TechCard({ image, progress }) {
 
 export default function Skills() {
   return (
-    <div className="bg-nearBlack text-white">
+    <div className="pt-16 bg-nearBlack text-white">
       <div
         id="skills"
-        className="max-w-screen-xl	mx-auto pb-20 lg:px-40 px-6 flex flex-col justify-center "
+        className="max-w-screen-xl	mx-auto flex flex-col justify-center "
       >
         {" "}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12 mt-4 xl:mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mt-4 xl:mt-10">
           <div>
             <div className={"text-4xl pb-6"}>Back-End & ML</div>
-            <SkillCard title="Python" progress="100" />
-            <SkillCard title="Spark" progress="96" />
-            <SkillCard title="SQL" progress="95" />
-            <SkillCard title="Scala" progress="75" />
-            <SkillCard title="GCP, AWS, and Azure" progress="68" />
+            <SkillCard title="Python" progress={100} />
+            <SkillCard title="Spark" progress={96} />
+            <SkillCard title="SQL" progress={95} />
+            <SkillCard title="Scala" progress={75} />
+            <SkillCard title="GCP, AWS, and Azure" progress={68} />
           </div>
           <div>
             <div className={"text-4xl pb-6"}>Front-End</div>
-            <SkillCard title="Django" progress="90" />
-            <SkillCard title="HTML + CSS" progress="80" />
-            <SkillCard title="React.js" progress="70" />
-            <SkillCard title="Celery + RPC" progress="70" />
-            <SkillCard title="jQuery" progress="60" />
+            <SkillCard title="Django" progress={90} />
+            <SkillCard title="HTML + CSS" progress={80} />
+            <SkillCard title="React.js" progress={70} />
+            <SkillCard title="Celery + RPC" progress={70} />
+            <SkillCard title="jQuery" progress={60} />
           </div>
         </div>
       </div>
