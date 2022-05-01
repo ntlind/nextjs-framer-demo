@@ -10,7 +10,9 @@ export default function Header() {
           <div className="flex justify-between items-center border-gray-100 py-2 md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span className="md:text-3xl font-medium">nick lind</span>
+                <span className="text-xl md:text-3xl font-medium">
+                  nick lind
+                </span>
               </a>
             </div>
             <NavBar />

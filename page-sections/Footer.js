@@ -18,7 +18,7 @@ export default function Footer() {
               Source
             </a>
           </div>
-          <div>© 2021 Nick Lind</div>
+          <div>© 2022 Nick Lind</div>
         </div>
       </div>
     </div>
