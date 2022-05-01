@@ -145,7 +145,7 @@ export default function NavBar() {
                             <motion.div
                                 whileHover={{ scale: 1.1 }}
                                 variants={itemVariants}
-                                className="block absolute bottom-24 text-2xl">
+                                className="block absolute bottom-24 text-xl">
                                 <button onClick={onClick}>Close Menu</button>
                             </motion.div>
                         </motion.div>

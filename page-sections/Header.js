@@ -4,13 +4,13 @@ import EaseInTransition from "../components/EaseInTransition.tsx";
 
 export default function Header() {
   return (
-    <div className={"fixed bg-transparent pt-10 w-screen"}>
+    <div className={"bg-transparent pt-10 w-screen"}>
       <EaseInTransition delay={0.35}>
         <div className="max-w-screen-xl mx-auto	lg:px-40 px-6">
           <div className="flex justify-between items-center border-gray-100 py-2 md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span className="text-3xl font-medium">nick lind</span>
+                <span className="md:text-3xl font-medium">nick lind</span>
               </a>
             </div>
             <NavBar />
