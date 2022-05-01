@@ -64,6 +64,7 @@ export default function Experience() {
               initial="initial"
               whileInView="animate"
               variants={variants.container}
+              viewport={{ once: true }}
             >
               <ExperienceCard
                 title="Co-Founder, Product"
@@ -103,6 +104,7 @@ export default function Experience() {
               initial="initial"
               whileInView="animate"
               variants={variants.container}
+              viewport={{ once: true }}
             >
               <ExperienceCard
                 title="MBA, Strategy & Statistics"

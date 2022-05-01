@@ -75,6 +75,7 @@ export default function Portfolio() {
         initial="initial"
         whileInView="animate"
         variants={variants.container}
+        viewport={{ once: true }}
       >
         <div className="flex flex-col space-y-24">
           <ProjectCard
