@@ -12,7 +12,7 @@ import Footer from "../page-sections/Footer.js";
 
 export default function Home() {
   return (
-    <div id="top">
+    <div id="top" className="overflow-x-hidden">
       <SEO
         title="Home"
         description="Personal page for Nick Lind, and analytics and machine learning consultant"

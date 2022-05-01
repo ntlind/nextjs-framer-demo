@@ -16,13 +16,13 @@ export default function About() {
             }
           />
           <div>
-            <EaseInTransition renderOnce={true}>
+            <EaseInTransition>
               <div className="text-4xl lg:text-title mt-4 xl:mt-10">
                 About me
               </div>
             </EaseInTransition>
-            <EaseInTransition renderOnce={true}>
-              <p className="text-lightGrayText text-md mt-4 xl:mt-10">
+            <EaseInTransition>
+              <p className="text-gray-200 text-md mt-4 xl:mt-10">
                 Data science leader and full-stack engineer focused on driving
                 growth through actionable, interpretable analytics. 7+ years of
                 experience across the Retail, CPG, and Healthcare sectors.

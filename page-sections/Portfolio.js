@@ -46,10 +46,7 @@ function ProjectCard({
             }
           >
             <p className="text-4xl py-6">{title}</p>
-            <p className="text-lightGrayText text-md lg:pr-16">
-              {" "}
-              {description}
-            </p>
+            <p className="text-gray-500 text-md lg:pr-16"> {description}</p>
             <div className="mt-12">
               <Link href={link_url} underline="none">
                 <a className="uppercase text-link-responsive text-black font-light border-bottom font-light tracking-wide cursor-pointer">

@@ -26,7 +26,7 @@ function SkillCard({ title, progress }) {
       <div className="col-span-2 flex flex-col justify-center">
         <BorderLinearProgress variant="determinate" value={progress} />
       </div>
-      {/* <div className="col-span-1 flex flex-col justify-center font-light text-lightGrayText text-sm">
+      {/* <div className="col-span-1 flex flex-col justify-center font-light text-gray-200 text-sm">
         {progress}%
       </div> */}
     </div>
@@ -56,7 +56,7 @@ export default function Skills() {
         {" "}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12 mt-4 xl:mt-10">
           <div>
-            <div className={"text-4xl pb-6 fade"}>Back-End & ML</div>
+            <div className={"text-4xl pb-6"}>Back-End & ML</div>
             <SkillCard title="Python" progress="100" />
             <SkillCard title="Spark" progress="96" />
             <SkillCard title="SQL" progress="95" />
@@ -64,7 +64,7 @@ export default function Skills() {
             <SkillCard title="GCP, AWS, and Azure" progress="68" />
           </div>
           <div>
-            <div className={"text-4xl pb-6 fade"}>Front-End</div>
+            <div className={"text-4xl pb-6"}>Front-End</div>
             <SkillCard title="Django" progress="90" />
             <SkillCard title="HTML + CSS" progress="80" />
             <SkillCard title="React.js" progress="70" />

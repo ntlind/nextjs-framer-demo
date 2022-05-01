@@ -7,7 +7,7 @@ function InfoCard({ title, description, tags }) {
     <div className="bg-gray rounded">
       <div className="p-10 pb-10">
         <div className="text-xl mb-6">{title}</div>
-        <p className="text-lightGrayText text-md">{description}</p>
+        <p className="text-gray-200 text-md">{description}</p>
       </div>
     </div>
   );
@@ -53,21 +53,21 @@ export default function Services() {
             <div className="grid grid-rows-3 gap-6 mt-10 lg:mt-0">
               <div>
                 <div className="text-2xl">Machine Learning</div>
-                <p className="text-lightGrayText text-md mt-4">
+                <p className="text-gray-200 text-md mt-4">
                   I build accurate, interpretable forecasting engines to
                   understand and predict future events.
                 </p>
               </div>
               <div>
                 <div className="text-2xl">Product Management</div>
-                <p className="text-lightGrayText text-md mt-4">
+                <p className="text-gray-200 text-md mt-4">
                   I bridge the gap between executives, users, and engineers to
                   build sustainable software products.
                 </p>
               </div>
               <div>
                 <div className="text-2xl">Data Science</div>
-                <p className="text-lightGrayText text-md mt-4">
+                <p className="text-gray-200 text-md mt-4">
                   I mine massive distributed datasets to uncover relationships,
                   validate hypotheses, and share stories.
                 </p>
