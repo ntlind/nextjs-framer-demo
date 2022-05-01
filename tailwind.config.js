@@ -22,7 +22,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Inter"],
+      sans: ["Questrial"],
     },
     variants: {
       animation: ["motion-safe"],

@@ -16,27 +16,8 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="favicon.ico" />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Inter:300,400,500,700"
+            href="https://fonts.googleapis.com/css?family=Questrial:300,400,500,700"
           />
-          <style jsx global>
-            {`
-              html,
-              body {
-                height: 100%;
-                width: 100%;
-              }
-              *,
-              *:after,
-              *:before {
-                box-sizing: border-box;
-              }
-              body {
-                font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
-                font-size: 1rem;
-                margin: 0;
-              }
-            `}
-          </style>
         </Head>
         <body>
           <Main />

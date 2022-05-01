@@ -2,10 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  --font-min: 16px;
+  --font-preferred: 12vw;
+  --font-max: 20vw;
+}
+
 @layer utilities {
   .text-title-responsive {
-    font-size: clamp(16px, 9vw, 81px);
-    line-height: clamp(16*1.2px, 1.2*9vw, 1.2*81px);
+    font-size: clamp(var(--font-min), var(--font-preferred), var(--font-max));
+    line-height: clamp(1.2*var(--font-min), 1.2*var(--font-preferred), 1.2*var(--font-max));
   }
   .text-subtitle-responsive {
     font-size: clamp(14px, 3.5vw, 24px);;
@@ -36,16 +42,38 @@
     filter: grayscale(80%);
   }
   .section-header {
-    @apply max-w-screen-xl	mx-auto min-h-90 py-20 lg:px-40 px-6 flex flex-col justify-center
+    @apply lg:px-24 px-6 mx-auto py-20 flex flex-col justify-center
   }
   .section {
-    @apply max-w-screen-xl	mx-auto pt-14 pb-12 lg:px-40 px-6 flex flex-col justify-center
+    @apply lg:px-24 px-6 mx-auto pt-14 pb-12 flex flex-col
   }
   .fade {
     animation: fadeAnimation cubic-bezier(.5, 0, 0, 1) .6s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;   
   }
+  .slide-left-right {
+    text-decoration: none;
+    display: inline-block;
+  }
+  /* add a empty string after the elment with class .slide-left-right */
+  .slide-left-right:after {
+    content: "";
+    display: block;
+    margin-top: 1px;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease; /* .5 seonds for changes to the width and background-color */
+    -webkit-transition: width 0.5s ease, background-color 0.5s ease; /* Chrome and Safari */
+    -moz-transition: width 0.5s ease, background-color 0.5s ease; /* FireFox */
+  }
+  /* Change the width and background on hover, aka sliding out */
+  .slide-left-right:hover:after {
+    width: 100%;
+    background: #111;
+  }
+
   
   @keyframes fadeAnimation { 
     0% { 
