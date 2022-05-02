@@ -1,15 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function SlideInTransition({
-    children,
+export default function SlideInText({
+    text,
     delay = 0.75,
     duration = 1.5,
     initialX = 0,
     fontSize = "100%",
 }) {
-
-
     const variants = {
         fadeIn: {
             initial: {
@@ -30,17 +28,21 @@ export default function SlideInTransition({
         },
     };
     return (
-        <div className="overflow-hidden mt-4">
-            <AnimatePresence>
-                <motion.div
-                    initial="initial"
-                    variants={variants.fadeIn}
-                    animate="animate"
-                    className="text-contrast"
-                >
-                    {children}
-                </motion.div>
-            </AnimatePresence>
-        </div>
+        <AnimatePresence>
+            {text.map(({ id, content }) => (
+                <div className="overflow-hidden">
+                    <motion.div
+                        key={id}
+                        initial="initial"
+                        variants={variants.fadeIn}
+                        animate="animate"
+                        className="text-contrast"
+                    >
+                        {content}
+                    </motion.div>
+                </div>
+
+            ))}
+        </AnimatePresence>
     );
 }

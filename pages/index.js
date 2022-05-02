@@ -110,7 +110,7 @@ export default function Home() {
         }
       >
         <div className="flex flex-col justify-between h-screen">
-          <SlideInTransition>
+          <SlideInTransition delay={0.55} duration={1}>
             <div className="flex justify-between items-center py-2 md:space-x-10 text-sm z-50">
               <div className="space-x-4">
                 <button onClick={() => onClick(true)}>
@@ -147,18 +147,16 @@ export default function Home() {
               </motion.div>
             </AnimatePresence>
           </SlideInTransition>
-          <SlideInTransition>
-            <AnimatePresence>
-              <motion.div
-                key="content"
-                initial={variants.contentinitial}
-                animate={contentControls}
-                exit={variants.contentclose}
-              >
-                <Hero />
-              </motion.div>
-            </AnimatePresence>
-          </SlideInTransition>
+          <AnimatePresence>
+            <motion.div
+              key="content"
+              initial={variants.contentinitial}
+              animate={contentControls}
+              exit={variants.contentclose}
+            >
+              <Hero />
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </div>
