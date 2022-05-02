@@ -75,14 +75,22 @@ export default function Home() {
           <div className="flex justify-between items-center py-2 md:space-x-10 text-sm z-50">
             <div className="space-x-4">
               <button onClick={() => onClick(true)}>
-                <span className="slide-left-right">Bio</span>
+                <span
+                  className={isOpen ? "slide-middle active" : "slide-middle"}
+                >
+                  Bio
+                </span>
               </button>
               <button onClick={() => onClick(false)}>
-                <span className="slide-left-right active">Work</span>
+                <span
+                  className={!isOpen ? "slide-middle active" : "slide-middle"}
+                >
+                  Work
+                </span>
               </button>
             </div>
             <button onClick={onClick}>
-              <span className="slide-left-right">Contact</span>
+              <span className="slide-middle">Contact</span>
             </button>
           </div>
         }
