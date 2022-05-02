@@ -148,14 +148,17 @@ export default function Home() {
             </AnimatePresence>
           </SlideInTransition>
           <AnimatePresence>
-            <motion.div
-              key="content"
-              initial={variants.contentinitial}
-              animate={contentControls}
-              exit={variants.contentclose}
-            >
-              <Hero />
-            </motion.div>
+            <div className="overflow-hidden">
+              <motion.div
+                key="content"
+                initial={variants.contentinitial}
+                animate={contentControls}
+                exit={variants.contentclose}
+                className="text-contrast"
+              >
+                <Hero />
+              </motion.div>
+            </div>
           </AnimatePresence>
         </div>
       </div>

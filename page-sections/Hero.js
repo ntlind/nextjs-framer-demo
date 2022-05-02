@@ -33,7 +33,7 @@ export default function Hero() {
               content: "Nick is a data scientist and software",
             },
             { id: 2, content: "engineer currently working at" },
-            { id: 3, content: "Meta's RealityLabs" },
+            { id: 3, content: "Meta's Reality Labs" },
           ]}
         />
       </div>
