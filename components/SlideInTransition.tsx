@@ -8,13 +8,7 @@ export default function SlideInTransition({
     initialX = 0,
     fontSize = "100%",
 }) {
-    const [isInitialMount, setInitialMount] = useState(false)
 
-    useEffect(() => {
-        if (!isInitialMount) {
-            setInitialMount(true)
-        }
-    });
 
     const variants = {
         fadeIn: {
@@ -40,7 +34,7 @@ export default function SlideInTransition({
             <AnimatePresence>
                 <motion.div
                     initial="initial"
-                    variants={isInitialMount ? variants.fadeIn : null}
+                    variants={variants.fadeIn}
                     animate="animate"
                     className="text-contrast"
                 >
