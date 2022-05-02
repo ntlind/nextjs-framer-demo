@@ -1,13 +1,21 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function SlideInTransition({
     children,
     delay = 0.55,
-    duration = 0.8,
+    duration = 1.1,
     initialX = 0,
     fontSize = "100%",
-    renderOnce = true,
 }) {
+    const [isInitialMount, setInitialMount] = useState(false)
+
+    useEffect(() => {
+        if (!isInitialMount) {
+            setInitialMount(true)
+        }
+    });
+
     const variants = {
         fadeIn: {
             initial: {
@@ -21,7 +29,7 @@ export default function SlideInTransition({
                 transition: {
                     delay: delay,
                     duration: duration,
-                    ease: [0, 0.55, 0.45, 1],
+                    ease: [0.85, 0, 0.15, 1],
                     staggerChildren: 0.1,
                 },
             },
@@ -32,9 +40,8 @@ export default function SlideInTransition({
             <AnimatePresence>
                 <motion.div
                     initial="initial"
-                    variants={variants.fadeIn}
-                    whileInView="animate"
-                    viewport={{ once: renderOnce }}
+                    variants={isInitialMount ? variants.fadeIn : null}
+                    animate="animate"
                     className="text-contrast"
                 >
                     {children}
