@@ -2,14 +2,15 @@ import { React, useState, useEffect } from "react";
 import SEO from "../components/SEO.js";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import SlideInTransition from "../components/SlideInTransition.tsx";
+import SlideinText from "../components/SlideInText.tsx";
 import Hero from "../page-sections/Hero.js";
 
 const animationDuration = 1.1;
 
 const variants = {
-  initial: { width: 0 },
+  initial: { x: "-100vw" },
   open: {
-    width: "100vw",
+    x: 0,
     transition: {
       delay: 0.7,
       duration: animationDuration,
@@ -18,7 +19,7 @@ const variants = {
     },
   },
   close: {
-    width: 0,
+    x: "-100vw",
     transition: {
       delay: 0.7,
       duration: animationDuration,
@@ -92,23 +93,47 @@ export default function Home() {
         title="Work"
         description="Personal page for Nick Lind, and analytics and machine learning consultant"
       />
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial="initial"
-            animate="open"
-            exit="close"
-            variants={variants}
-            className="absolute z-0 text-4xl text-white bg-black top-0 left-0 h-screen"
-          ></motion.div>
-        )}
-      </AnimatePresence>
+
       <div
         id="hero"
         className={
           "section h-screen justify-center overflow-hidden bg-eggshell"
         }
       >
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial="initial"
+              animate="open"
+              exit="close"
+              variants={variants}
+              className="absolute z-0 bg-nearBlack top-0 left-0 w-screen lg:px-24 px-6 mx-auto"
+            >
+              <div className="grid grid-cols-12">
+                <div className="col-span-6 flex flex-col text-2xl justify-end pb-36">
+                  <SlideinText
+                    delay={1}
+                    duration={1.5}
+                    text={[
+                      {
+                        id: 1,
+                        content: "Nick is a data scientist and software",
+                      },
+                      { id: 2, content: "engineer currently working at" },
+                      { id: 3, content: "Meta's Reality Labs" },
+                    ]}
+                  />
+                </div>
+                <motion.img
+                  className="h-screen object-contain grayscale col-span-6"
+                  src={
+                    "https://www.pngkey.com/png/full/202-2024933_grandma-png-picture-grandma-transparent-background.png"
+                  }
+                ></motion.img>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <div className="flex flex-col justify-between h-screen">
           <SlideInTransition delay={0.55} duration={1}>
             <div className="flex justify-between items-center py-2 md:space-x-10 text-sm z-50">
@@ -133,7 +158,6 @@ export default function Home() {
               </button>
             </div>
           </SlideInTransition>
-          ;
           <SlideInTransition>
             <AnimatePresence>
               <motion.div

@@ -11,7 +11,7 @@ module.exports = {
       ...colors,
       transparent: "transparent",
       nearWhite: "#ccc",
-      nearBlack: "#111111",
+      nearBlack: "#100f0f",
       eggshell: "#fcf6f4",
       theme: {
         DEFAULT: "#3c7cff",
