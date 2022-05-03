@@ -1,5 +1,6 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import SlideInViewportTransition from "../components/SlideInViewportTransition.tsx";
 
 const variants = {
   container: {
@@ -32,79 +33,77 @@ function ProjectCard({
   description,
   image_url,
   link_url,
-  link_text,
-  reverse,
+  reverse = false,
+  parentClass = "grid grid-cols-12",
+  childClass = "col-start-3 col-span-4 cursor-pointer",
 }) {
   return (
-    <motion.div variants={variants.card}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div>
-          <div
-            className={
-              "grid grid-cols-1 my-auto mx-6 flex-1 text-center lg:text-left"
-            }
-          >
-            <p className="text-4xl py-6">{title}</p>
-            <p className="text-gray-500 text-md lg:pr-16"> {description}</p>
-            <div className="mt-12">
-              <a
-                href={link_url}
-                className="uppercase text-link-responsive text-black border-bottom font-light tracking-wide cursor-pointer"
-              >
-                {link_text}
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="flex-1">
+    <div className={parentClass}>
+      <a className={childClass} href={link_url}>
+        <SlideInViewportTransition>
           <img
             src={image_url}
-            className="rounded-lg black mx-auto my-auto shadow-xl object-cover"
-          />{" "}
-        </div>
+            className={`mx-auto my-auto shadow-xl object-cover w-full h-60`}
+          />
+        </SlideInViewportTransition>
+        <SlideInViewportTransition>
+          <span className="uppercase">{title}</span>
+        </SlideInViewportTransition>
+      </a>
+      <div
+        className={reverse ? "col-span-2 mx-4 order-first" : "col-span-2 mx-4"}
+      >
+        <SlideInViewportTransition>{description}</SlideInViewportTransition>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function Portfolio() {
   return (
-    <div id="portfolio" className="section">
-      <div className="text-4xl lg:text-title mb-16">Recent Projects</div>
+    <div id="portfolio" className="">
       <motion.div
         initial="initial"
         whileInView="animate"
         variants={variants.container}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col space-y-24">
+        <div className="flex flex-col space-y-20">
           <ProjectCard
             title="anomaly-detection"
             description="An automated anomaly detection library for hierarchical time series."
             image_url="https://github.com/ntlind/anomaly-detection/raw/master/examples/example_graph.PNG"
-            link_text="View on GitHub"
             link_url="https://github.com/ntlind/anomaly-detection"
+            reverse={false}
+            parentClass="grid grid-cols-12"
+            childClass="col-start-3 col-span-5 cursor-pointer"
           />
           <ProjectCard
             title="ForecastFrame"
             description="A fast, accurate, and interpretable hierarchical timeseries forecasting library."
             image_url="https://s.yimg.com/ny/api/res/1.2/MCBJaot4sCn8x1wTgmhEjg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MA--/https://media.zenfs.com/en/simply_wall_st__316/01d1f05695ab07ad4c1f411240c3afe9"
-            link_text="View on GitHub"
             link_url="https://github.com/ntlind/forecastframe"
+            reverse={false}
+            parentClass="grid grid-cols-12"
+            childClass="col-start-7 col-span-4 cursor-pointer"
           />
           <ProjectCard
             title="Next.js Landing Blog"
             description="A full Next.js landing page and blog built using Material UI's components."
             image_url="./blog_example.webp"
-            link_text="View on GitHub"
             link_url="https://github.com/ntlind/nextjs-react-landing-blog"
+            reverse={true}
+            parentClass="grid grid-cols-12 text-right"
+            childClass="col-start-3 col-span-5 cursor-pointer"
           />
           <ProjectCard
             title="This website"
             description="Built from scratch using React components on Next.js with Tailwind CSS."
             link_url="https://github.com/ntlind/nextjs-minimalist-websume"
-            link_text="View on GitHub"
             image_url="website_example.webp"
+            reverse={false}
+            parentClass="grid grid-cols-12"
+            childClass="col-start-5 col-span-5 cursor-pointer"
           />
         </div>
       </motion.div>

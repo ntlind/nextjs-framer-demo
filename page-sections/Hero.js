@@ -6,9 +6,6 @@ export default function Hero() {
   return (
     <div className="flex justify-between items-center text-contrast">
       <div className="flex flex-col">
-        <SlideInTransition delay={1} duration={3}>
-          <a className="underline mb-4">nthorlind@gmail.com</a>
-        </SlideInTransition>
         <span className="text-5xl font-bold">
           <SlideinText
             delay={1}

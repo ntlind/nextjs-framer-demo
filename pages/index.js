@@ -4,6 +4,9 @@ import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import SlideInTransition from "../components/SlideInTransition.tsx";
 import SlideinText from "../components/SlideInText.tsx";
 import Hero from "../page-sections/Hero.js";
+import Experience from "../page-sections/Experience.js";
+import Portfolio from "../page-sections/Portfolio";
+import Footer from "../page-sections/Footer.js";
 
 const animationDuration = 1.1;
 
@@ -31,7 +34,7 @@ const variants = {
     x: 0,
   },
   textopen: {
-    x: "-54%",
+    x: "-52%",
     transition: {
       delay: 0.7,
       duration: animationDuration,
@@ -52,7 +55,7 @@ const variants = {
     x: 0,
   },
   contentopen: {
-    x: "100%",
+    x: "120%",
     transition: {
       delay: 0.7,
       duration: animationDuration - 0.3,
@@ -94,12 +97,7 @@ export default function Home() {
         description="Personal page for Nick Lind, and analytics and machine learning consultant"
       />
 
-      <div
-        id="hero"
-        className={
-          "section h-screen justify-center overflow-hidden bg-eggshell"
-        }
-      >
+      <div id="hero" className={"section h-screen justify-center bg-eggshell"}>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -110,7 +108,7 @@ export default function Home() {
               className="absolute z-0 bg-nearBlack top-0 left-0 w-screen lg:px-24 px-6 mx-auto"
             >
               <div className="grid grid-cols-12">
-                <div className="col-span-6 flex flex-col text-2xl justify-end pb-36">
+                <div className="col-span-4 lg:col-span-7 flex flex-col text-2xl justify-end pb-36">
                   <SlideinText
                     delay={1}
                     duration={1.5}
@@ -125,11 +123,13 @@ export default function Home() {
                   />
                 </div>
                 <motion.img
-                  className="h-screen object-contain grayscale col-span-6"
-                  src={
-                    "https://www.pngkey.com/png/full/202-2024933_grandma-png-picture-grandma-transparent-background.png"
-                  }
+                  className="object-contain grayscale h-screen col-span-8 lg:col-span-5"
+                  src={"./Headshot.webp"}
                 ></motion.img>
+                <div className="col-span-12 pb-10">
+                  <Experience />
+                  <Footer />
+                </div>
               </div>
             </motion.div>
           )}
@@ -154,7 +154,13 @@ export default function Home() {
                 </button>
               </div>
               <button onClick={onClick}>
-                <span className="slide-middle">Contact</span>
+                <a
+                  href="mailto:nthorlind@gmail.com"
+                  target="_blank"
+                  className="slide-middle slide-middle active"
+                >
+                  nthorlind@gmail.com
+                </a>
               </button>
             </div>
           </SlideInTransition>
@@ -172,7 +178,7 @@ export default function Home() {
             </AnimatePresence>
           </SlideInTransition>
           <AnimatePresence>
-            <div className="overflow-hidden">
+            <div className="">
               <motion.div
                 key="content"
                 initial={variants.contentinitial}
@@ -186,6 +192,14 @@ export default function Home() {
           </AnimatePresence>
         </div>
       </div>
+      {!isOpen && (
+        <div id="portfolio" className={"section justify-start bg-eggshell"}>
+          <Portfolio />
+          <SlideInTransition delay={1.1} duration={3}>
+            <Footer />
+          </SlideInTransition>
+        </div>
+      )}
     </div>
   );
 }

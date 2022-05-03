@@ -30,7 +30,7 @@ export default function SlideInText({
     return (
         <AnimatePresence>
             {text.map(({ id, content }) => (
-                <div className="overflow-hidden">
+                <div key={id} className="overflow-hidden">
                     <motion.div
                         key={id}
                         initial="initial"

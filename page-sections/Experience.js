@@ -27,14 +27,18 @@ const variants = {
   },
 };
 
-function ExperienceCard({ title, company, date, logo }) {
+function ExperienceCard({ title, company, date, logo, invert = false }) {
   return (
     <motion.div variants={variants.card}>
       <div className="grid grid-cols-5 gap-4 bg-transparent py-4">
         <div className="col-span-1  flex flex-wrap content-center">
           <img
             src={logo}
-            className="rounded-lg max-h-16 black mx-auto my-auto"
+            className={
+              invert
+                ? "rounded-lg max-h-16 black mx-auto my-auto invert"
+                : "rounded-lg max-h-16 black mx-auto my-auto"
+            }
           />
         </div>
         <div className="col-span-4">
@@ -51,21 +55,23 @@ function ExperienceCard({ title, company, date, logo }) {
 export default function Experience() {
   return (
     <div className="bg-nearBlack text-white">
-      <div
-        id="experience"
-        className={
-          "max-w-screen-xl mx-auto pb-20 lg:px-40 px-6 flex flex-col justify-center "
-        }
-      >
+      <div id="experience" className={"pb-6 flex flex-col justify-center "}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12 mt-4 xl:mt-10">
           <div>
-            <div className={"text-4xl mt-4 xl:mt-10 pb-6"}>Experience</div>
+            <div className={"text-4xl pb-4"}>Experience</div>
             <motion.div
               initial="initial"
               whileInView="animate"
               variants={variants.container}
               viewport={{ once: true }}
             >
+              <ExperienceCard
+                title="Data Science"
+                company="Reality Labs"
+                date="2021-Present"
+                logo="/experience_logos/frl.png"
+                invert
+              />
               <ExperienceCard
                 title="Co-Founder, Product"
                 company="Quantile"
@@ -75,31 +81,13 @@ export default function Experience() {
               <ExperienceCard
                 title="Engagement Manager"
                 company="Monitor Deloitte"
-                date="2018-2020"
+                date="2013-2020"
                 logo="/experience_logos/deloitte.webp"
-              />
-              <ExperienceCard
-                title="Senior Data Scientist"
-                company="IBM"
-                date="2017-2017"
-                logo="/experience_logos/ibm.webp"
-              />
-              <ExperienceCard
-                title="Consultant"
-                company="Deloitte Consulting"
-                date="2013-2016"
-                logo="/experience_logos/deloitte.webp"
-              />
-              <ExperienceCard
-                title="Econometrics Tutor"
-                company="University of Colorado"
-                date="2011-2013"
-                logo="/experience_logos/cu.webp"
               />
             </motion.div>
           </div>
           <div>
-            <div className={"text-4xl mt-4 xl:mt-10 pb-6"}>Education</div>
+            <div className={"text-4xl pb-4"}>Education</div>
             <motion.div
               initial="initial"
               whileInView="animate"
