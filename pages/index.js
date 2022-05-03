@@ -108,7 +108,8 @@ export default function Home() {
               className="absolute z-0 bg-nearBlack top-0 left-0 w-screen lg:px-24 px-6 mx-auto"
             >
               <div className="grid grid-cols-12">
-                <div className="col-span-4 lg:col-span-7 flex flex-col text-2xl justify-end pb-36">
+                <div className="h-screen-9/12 lg:h-0 col-span-12"></div>
+                <div className="hidden lg:flex lg:col-span-7 flex-col text-2xl justify-end pb-36">
                   <SlideinText
                     delay={1}
                     duration={1.5}
@@ -122,8 +123,21 @@ export default function Home() {
                     ]}
                   />
                 </div>
+                <div className="flex lg:hidden col-span-12 flex-col text-2xl justify-end pb-36 pt-4">
+                  <SlideinText
+                    delay={1}
+                    duration={1.5}
+                    text={[
+                      {
+                        id: 1,
+                        content:
+                          "Nick is a data scientist and software engineer currently working at Meta's Realiby Labs",
+                      },
+                    ]}
+                  />
+                </div>
                 <motion.img
-                  className="object-contain grayscale h-screen col-span-8 lg:col-span-5"
+                  className="object-contain grayscale h-screen col-span-12 lg:col-span-5 absolute inset-0 lg:relative"
                   src={"./Headshot.webp"}
                 ></motion.img>
                 <div className="col-span-12 pb-10">

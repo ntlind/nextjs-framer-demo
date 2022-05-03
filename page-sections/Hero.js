@@ -20,7 +20,7 @@ export default function Hero() {
           />
         </span>
       </div>
-      <div className="text-right text-sm">
+      <div className="text-right text-sm hidden md:block">
         <SlideinText
           delay={1}
           duration={3}

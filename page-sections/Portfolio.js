@@ -51,7 +51,11 @@ function ProjectCard({
         </SlideInViewportTransition>
       </a>
       <div
-        className={reverse ? "col-span-2 mx-4 order-first" : "col-span-2 mx-4"}
+        className={
+          reverse
+            ? "col-span-10 col-start-2 lg:col-start-auto lg:col-span-3 lg:mx-4 lg:order-first"
+            : "col-span-10 col-start-2 lg:col-start-auto lg:col-span-2 lg:mx-4"
+        }
       >
         <SlideInViewportTransition>{description}</SlideInViewportTransition>
       </div>
@@ -68,7 +72,7 @@ export default function Portfolio() {
         variants={variants.container}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col space-y-20">
+        <div className="flex flex-col space-y-12 md:space-y-20">
           <ProjectCard
             title="anomaly-detection"
             description="An automated anomaly detection library for hierarchical time series."
@@ -76,7 +80,7 @@ export default function Portfolio() {
             link_url="https://github.com/ntlind/anomaly-detection"
             reverse={false}
             parentClass="grid grid-cols-12"
-            childClass="col-start-3 col-span-5 cursor-pointer"
+            childClass="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5 cursor-pointer"
           />
           <ProjectCard
             title="ForecastFrame"
@@ -85,7 +89,7 @@ export default function Portfolio() {
             link_url="https://github.com/ntlind/forecastframe"
             reverse={false}
             parentClass="grid grid-cols-12"
-            childClass="col-start-7 col-span-4 cursor-pointer"
+            childClass="col-start-2 col-span-10 lg:col-start-7 lg:col-span-4 cursor-pointer"
           />
           <ProjectCard
             title="Next.js Landing Blog"
@@ -93,8 +97,8 @@ export default function Portfolio() {
             image_url="./blog_example.webp"
             link_url="https://github.com/ntlind/nextjs-react-landing-blog"
             reverse={true}
-            parentClass="grid grid-cols-12 text-right"
-            childClass="col-start-3 col-span-5 cursor-pointer"
+            parentClass="grid grid-cols-12 lg:text-right"
+            childClass="col-start-2 col-span-10 lg:col-start-4 lg:col-span-5 cursor-pointer"
           />
           <ProjectCard
             title="This website"
@@ -103,7 +107,7 @@ export default function Portfolio() {
             image_url="website_example.webp"
             reverse={false}
             parentClass="grid grid-cols-12"
-            childClass="col-start-5 col-span-5 cursor-pointer"
+            childClass="col-start-2 col-span-10 lg:col-start-7 lg:col-span-4 cursor-pointer"
           />
         </div>
       </motion.div>
