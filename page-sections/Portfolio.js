@@ -43,7 +43,7 @@ function ProjectCard({
         <SlideInViewportTransition>
           <img
             src={image_url}
-            className={`mx-auto my-auto shadow-xl object-cover w-full h-60`}
+            className={`mx-auto my-auto shadow-xl object-cover w-full aspect-video`}
           />
         </SlideInViewportTransition>
         <SlideInViewportTransition>

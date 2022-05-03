@@ -56,7 +56,7 @@ export default function Experience() {
   return (
     <div className="bg-nearBlack text-white">
       <div id="experience" className={"pb-6 flex flex-col justify-center "}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg: gap-12 mt-4 xl:mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 mt-4 xl:mt-10">
           <div>
             <div className={"text-4xl pb-4"}>Experience</div>
             <motion.div

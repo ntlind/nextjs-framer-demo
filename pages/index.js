@@ -108,7 +108,7 @@ export default function Home() {
               className="absolute z-0 bg-nearBlack top-0 left-0 w-screen lg:px-24 px-6 mx-auto"
             >
               <div className="grid grid-cols-12">
-                <div className="h-screen-9/12 lg:h-0 col-span-12"></div>
+                <div className="h-screen-10/12 lg:h-0 col-span-12"></div>
                 <div className="hidden lg:flex lg:col-span-7 flex-col text-2xl justify-end pb-36">
                   <SlideinText
                     delay={1}
@@ -123,7 +123,7 @@ export default function Home() {
                     ]}
                   />
                 </div>
-                <div className="flex lg:hidden col-span-12 flex-col text-2xl justify-end pb-36 pt-4">
+                <div className="flex lg:hidden col-span-12 md:col-span-7 md:pt-10 flex-col text-2xl justify-end pb-36">
                   <SlideinText
                     delay={1}
                     duration={1.5}
