@@ -1,16 +1,21 @@
-## Next.js Minimalist Websume
+## Next.js Framer Demonstration
 
-A minimalist website template inspired by [Lustre Studio](https://www.lustrestudio.co/).
+A minimalist website template inspired by [Exoape's](https://www.exoape.com/) site for [Ali Ali](https://alitwotimes.com/).
 
-## Background
-
-I fell in love with Lustre Studio's design while looking for inspiration for [Quantile's website](https://www.quantilegroup.com). The clean lines and interesting components seemed worthy of study, so I spent a frozen Chicago weekend reecreating their great work using Next.js, React, and TailwindCSS. 
+![Image of website design](https://raw.githubusercontent.com/ntlind/nextjs-framer-demo/14e16fcbc975c0ed436e0035526a7e4506afcb80/public/demo-image.png)
 
 ## Getting Started
 
 First, install this repository using:
 ```bash
-$ git clone https://github.com/ntlind/nextjs-minimalist-websume
+git clone https://github.com/ntlind/nextjs-framer-demo
+```
+
+Then, install your packages:
+```bash
+npm install 
+# or 
+yarn install
 ```
 
 Next, run the development server:
@@ -20,7 +25,6 @@ npm run dev
 # or
 yarn dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
@@ -35,5 +39,3 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
