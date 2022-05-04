@@ -65,7 +65,7 @@ function ProjectCard({
 
 export default function Portfolio() {
   return (
-    <div id="portfolio" className="">
+    <div id="portfolio" className="relative z-0">
       <motion.div
         initial="initial"
         whileInView="animate"

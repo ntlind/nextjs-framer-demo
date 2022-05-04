@@ -34,57 +34,18 @@
     font-size: clamp(var(--font-min), var(--font-preferred), var(--font-max));
     line-height: clamp(--lineheight-multipler*var(--font-min), --lineheight-multipler*var(--font-preferred), --lineheight-multipler*var(--font-max));
   }
-  .border-bottom {
-    border-bottom: 1px solid #000;
-    padding-bottom: 2px
-  }
-  .border-bottom-white {
-    border-bottom: 1px solid #fff;
-    padding-bottom: 2px; 
-  }
-  .min-h-90 {
-    min-height: 90vh;
-  }
-  .min-h-70 {
-    min-height: 70vh;
-  }
-  .h-card {
-    height: 30vh;
-  }
+    }
   .filter-grayscale {
     filter: grayscale(80%);
   }
-  .section-header {
-    @apply lg:px-24 px-6 mx-auto py-20 flex flex-col justify-center
+  .section-x {
+    @apply px-6 lg:px-24 2xl:px-36 mx-auto
+  }
+  .section-y {
+    @apply pt-14 2xl:pt-28 pb-12 2xl:pb-24
   }
   .section {
-    @apply px-6 lg:px-24 2xl:px-36 mx-auto pt-14 2xl:pt-28 pb-12 2xl:pb-24 flex flex-col
-  }
-  .fade {
-    animation: fadeAnimation cubic-bezier(.5, 0, 0, 1) .6s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards;   
-  }
-  .slide-left-right {
-    text-decoration: none;
-    display: inline-block;
-  }
-  /* add a empty string after the elment with class .slide-left-right */
-  .slide-left-right:after {
-    content: "";
-    display: block;
-    margin-top: 1px;
-    height: 1px;
-    width: 0;
-    background: transparent;
-    transition: width 0.5s ease, background-color 0.5s ease; /* .5 seonds for changes to the width and background-color */
-    -webkit-transition: width 0.5s ease, background-color 0.5s ease; /* Chrome and Safari */
-    -moz-transition: width 0.5s ease, background-color 0.5s ease; /* FireFox */
-  }
-  /* Change the width and background on hover, aka sliding out */
-  .slide-left-right:hover:after {
-    width: 100%;
-    background: #fff;
+    @apply section-x section-y
   }
   .slide-middle {
     color: #fff;
@@ -113,29 +74,4 @@
         opacity: 1; 
         transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1),
      } 
-  } 
-  @layer components {
-    .photo {
-      position:relative;
-      z-index:-1;
-      display:block;
-    }
-   .photo-text {
-      width: 560px;
-   }
-   .photo-gradient {
-    display:inline-block;
-    background: -moz-linear-gradient(top, rgba(16,15,15,0) 0%, rgba(16,15,15,.85) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(16,15,15,0.65)), color-stop(100%,rgba(16,15,15,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(16,15,15,0) 0%,rgba(16,15,15,.85) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(16,15,15,0) 0%,rgba(16,15,15,.85) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(16,15,15,0) 0%,rgba(16,15,15,.85) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(16,15,15,0) 0%,rgba(16,15,15,.85) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
   }
-   .text-title{
-    font-size: 3rem;
-    line-height: 4rem;
-  }
-  }
-}
