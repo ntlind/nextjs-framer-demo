@@ -13,6 +13,15 @@
 }
 
 @layer utilities {
+  .hide-scrolling {
+      overflow-y: scroll;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  .hide-scrolling::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+  }
   .text-contrast {
     color: #fff;
     mix-blend-mode: difference;

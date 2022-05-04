@@ -34,7 +34,7 @@ const variants = {
     x: 0,
   },
   textopen: {
-    x: "-52%",
+    x: "-51%",
     transition: {
       delay: 0.7,
       duration: animationDuration,
@@ -91,12 +91,14 @@ export default function Home() {
   }
 
   return (
-    <div id="top" className="overflow-x-hidden h-screen text-responsive">
+    <div
+      id="top"
+      className="overflow-x-hidden hide-scrolling h-screen text-responsive"
+    >
       <SEO
         title="Work"
         description="Personal page for Nick Lind, and analytics and machine learning consultant"
       />
-
       <div id="hero" className={"section h-screen justify-center bg-eggshell"}>
         <AnimatePresence>
           {isOpen && (
@@ -108,7 +110,6 @@ export default function Home() {
               className="absolute z-0 bg-nearBlack top-0 left-0 w-screen lg:px-24 px-6 mx-auto"
             >
               <div className="grid grid-cols-12">
-                <div className="h-screen-10/12 lg:h-0 col-span-12"></div>
                 <div className="hidden lg:flex lg:col-span-7 flex-col text-2xl justify-end pb-36">
                   <SlideinText
                     delay={1}

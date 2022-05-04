@@ -19,7 +19,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Questrial:300,400,500,700,800,900"
           />
         </Head>
-        <body>
+        <body className='overflow-x-hidden hide-scrolling'>
           <Main />
           <NextScript />
         </body>
