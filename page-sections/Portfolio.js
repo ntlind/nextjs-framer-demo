@@ -53,7 +53,7 @@ function ProjectCard({
       <div
         className={
           reverse
-            ? "col-span-10 col-start-2 lg:col-start-auto lg:col-span-3 lg:mx-4 lg:order-first"
+            ? "col-span-10 col-start-2 lg:col-start-auto lg:col-span-2 lg:mx-4 lg:order-first"
             : "col-span-10 col-start-2 lg:col-start-auto lg:col-span-2 lg:mx-4"
         }
       >
@@ -98,7 +98,7 @@ export default function Portfolio() {
             link_url="https://github.com/ntlind/nextjs-react-landing-blog"
             reverse={true}
             parentClass="grid grid-cols-12 lg:text-right"
-            childClass="col-start-2 col-span-10 lg:col-start-4 lg:col-span-5 cursor-pointer"
+            childClass="col-start-2 col-span-10 lg:col-start-3 lg:col-span-5 cursor-pointer"
           />
           <ProjectCard
             title="This website"

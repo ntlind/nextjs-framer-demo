@@ -4,8 +4,12 @@
 
 :root {
   --font-min: 16px;
-  --font-preferred: 12vw;
-  --font-max: 20vw;
+  --font-preferred: .8vw;
+  --font-max: 24px;
+  --title-min: 16px;
+  --title-preferred: 12vw;
+  --title-max: 20vw;
+  --lineheight-multiplier: 1.4;
 }
 
 @layer utilities {
@@ -14,16 +18,12 @@
     mix-blend-mode: difference;
   }
   .text-title-responsive {
+    font-size: clamp(var(--title-min), var(--title-preferred), var(--title-max));
+    line-height: clamp(--lineheight-multipler*var(--title-min), --lineheight-multipler*var(--title-preferred), --lineheight-multipler*var(--title-max));
+  }
+  .text-responsive {
     font-size: clamp(var(--font-min), var(--font-preferred), var(--font-max));
-    line-height: clamp(1.2*var(--font-min), 1.2*var(--font-preferred), 1.2*var(--font-max));
-  }
-  .text-subtitle-responsive {
-    font-size: clamp(14px, 3.5vw, 24px);;
-    line-height: clamp(1.1*14px, 1.2*3.5vw, 1.2*24px);;
-  }
-  .text-link-responsive {
-    font-size: clamp(1.125rem, 2vw, 20px);;
-    line-height: clamp(1.125rem, 2vw, 20px);;
+    line-height: clamp(--lineheight-multipler*var(--font-min), --lineheight-multipler*var(--font-preferred), --lineheight-multipler*var(--font-max));
   }
   .border-bottom {
     border-bottom: 1px solid #000;
@@ -49,7 +49,7 @@
     @apply lg:px-24 px-6 mx-auto py-20 flex flex-col justify-center
   }
   .section {
-    @apply lg:px-24 px-6 mx-auto pt-14 pb-12 flex flex-col
+    @apply px-6 lg:px-24 2xl:px-36 mx-auto pt-14 2xl:pt-28 pb-12 2xl:pb-24 flex flex-col
   }
   .fade {
     animation: fadeAnimation cubic-bezier(.5, 0, 0, 1) .6s; 

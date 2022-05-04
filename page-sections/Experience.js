@@ -43,7 +43,7 @@ function ExperienceCard({ title, company, date, logo, invert = false }) {
         </div>
         <div className="col-span-4">
           <div className="text-lg">{title}</div>
-          <p className="my-2 text-md text-nearWhite">
+          <p className="my-2  text-nearWhite">
             {company}, {date}
           </p>
         </div>

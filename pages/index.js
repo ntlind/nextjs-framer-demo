@@ -91,7 +91,7 @@ export default function Home() {
   }
 
   return (
-    <div id="top" className="overflow-x-hidden h-screen">
+    <div id="top" className="overflow-x-hidden h-screen text-responsive">
       <SEO
         title="Work"
         description="Personal page for Nick Lind, and analytics and machine learning consultant"
@@ -150,7 +150,7 @@ export default function Home() {
         </AnimatePresence>
         <div className="flex flex-col justify-between h-screen">
           <SlideInTransition delay={0.55} duration={1}>
-            <div className="flex justify-between items-center py-2 md:space-x-10 text-sm z-50">
+            <div className="flex justify-between items-center py-2 md:space-x-10 z-50">
               <div className="space-x-4">
                 <button onClick={() => onClick(true)}>
                   <span
