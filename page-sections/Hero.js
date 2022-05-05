@@ -6,6 +6,19 @@ import SlideinText from "../components/SlideInText.tsx";
 export default function Hero({ props }) {
   return (
     <>
+      <SlideInTransition>
+        <AnimatePresence>
+          <motion.div
+            key="big-font-name"
+            initial={props.variants.textinitial}
+            animate={props.controls}
+            exit={props.variants.textclose}
+            className="text-title-responsive font-extrabold tracking-tight text-right"
+          >
+            nick lind
+          </motion.div>
+        </AnimatePresence>
+      </SlideInTransition>
       <AnimatePresence>
         <motion.div
           key="content"
@@ -16,7 +29,7 @@ export default function Hero({ props }) {
         >
           <div className="flex justify-between items-center text-contrast">
             <div className="flex flex-col">
-              <span className="text-5xl font-bold">
+              <span className="text-3xl md:text-5xl font-bold">
                 <SlideinText
                   delay={1}
                   duration={3}
@@ -33,7 +46,7 @@ export default function Hero({ props }) {
             <div className="text-right hidden md:block">
               <SlideinText
                 delay={1}
-                duration={3}
+                duration={4}
                 text={[
                   {
                     id: 1,
