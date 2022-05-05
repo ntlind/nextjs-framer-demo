@@ -2,7 +2,7 @@
 
 A minimalist website template inspired by [Exoape's](https://www.exoape.com/) site for [Ali Ali](https://alitwotimes.com/).
 
-![Image of website design](https://raw.githubusercontent.com/ntlind/nextjs-framer-demo/14e16fcbc975c0ed436e0035526a7e4506afcb80/public/demo-image.png)
+![Image of website design](https://github.com/ntlind/nextjs-framer-demo/blob/main/public/demo-image.png?raw=true)
 
 ## Getting Started
 
