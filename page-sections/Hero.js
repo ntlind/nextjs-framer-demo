@@ -6,19 +6,6 @@ import SlideinText from "../components/SlideInText.tsx";
 export default function Hero({ props }) {
   return (
     <>
-      <SlideInTransition>
-        <AnimatePresence>
-          <motion.div
-            key="big-font-name"
-            initial={props.variants.textinitial}
-            animate={props.controls}
-            exit={props.variants.textclose}
-            className="text-title-responsive font-extrabold tracking-tight text-right"
-          >
-            nick lind
-          </motion.div>
-        </AnimatePresence>
-      </SlideInTransition>
       <AnimatePresence>
         <motion.div
           key="content"

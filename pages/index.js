@@ -36,10 +36,11 @@ const variants = {
     },
   },
   textinitial: {
-    x: 0,
+    right: 0,
   },
   textopen: {
-    x: "-52%",
+    left: 0,
+    right: null,
     transition: {
       delay: 0.7,
       duration: animationDuration,
@@ -48,7 +49,8 @@ const variants = {
     },
   },
   textclose: {
-    x: 0,
+    right: 0,
+    left: null,
     transition: {
       delay: 0.7,
       duration: animationDuration,
@@ -98,13 +100,26 @@ export default function Home() {
   return (
     <div
       id="top"
-      className="overflow-x-hidden hide-scrolling h-screen text-responsive"
+      className="overflow-x-hidden hide-scrolling h-screen text-responsive absolute w-screen"
     >
       <SEO
         title="Work"
         description="Personal page for Nick Lind, and analytics and machine learning consultant"
       />
       <div className={"bg-eggshell"}>
+        <AnimatePresence>
+          <motion.div
+            key="big-font-name"
+            initial={variants.textinitial}
+            animate={controls}
+            exit={variants.textclose}
+            className="absolute right-0 section-x z-50 text-contrast top-[50%] md:top-[45%] lg:top-[40%] xl:top-[32%]"
+          >
+            <div className="text-title-responsive whitespace-nowrap">
+              nick lind
+            </div>
+          </motion.div>
+        </AnimatePresence>
         <AnimatePresence>
           {isOpen && (
             <Bio
