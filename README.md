@@ -1,6 +1,6 @@
 ## Next.js Framer Demonstration
 
-A minimalist website template inspired by [Exoape's](https://www.exoape.com/) site for [Ali Ali](https://alitwotimes.com/).
+A for-fun minimalist website template inspired by [Exoape's](https://www.exoape.com/) site for [Ali Ali](https://alitwotimes.com/).
 
 ![Image of website design](https://github.com/ntlind/nextjs-framer-demo/blob/main/public/demo-image.png?raw=true)
 
